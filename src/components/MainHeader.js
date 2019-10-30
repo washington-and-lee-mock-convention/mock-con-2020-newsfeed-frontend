@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './static/images/mock_con_logo.svg';
 import { PageHeader, Brand } from '@patternfly/react-core';
+import Search from './SearchForm';
 
 export default props => {
 
@@ -16,6 +17,7 @@ export default props => {
             showNavToggle
             isNavOpen={props.isNavOpen}
             onNavToggle={() => props.onNavToggle()}
+            toolbar={<Search {...props}/>}
         />
     );
 

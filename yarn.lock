@@ -1181,7 +1181,7 @@
     focus-trap-react "^4.0.1"
     tippy.js "3.4.1"
 
-"@patternfly/react-icons@^3.14.7":
+"@patternfly/react-icons@^3.14.15", "@patternfly/react-icons@^3.14.7":
   version "3.14.15"
   resolved "https://registry.yarnpkg.com/@patternfly/react-icons/-/react-icons-3.14.15.tgz#2b538b722103dbb86301525820b40326bf167029"
   integrity sha512-7mIr1nzAXu6CdxKnhJGggIghx3DCaFXv6an+mfP/IwWifsLhcpE1c0iYkmVkvlI9X4cQAzeg9VfEGR7quhPOlA==

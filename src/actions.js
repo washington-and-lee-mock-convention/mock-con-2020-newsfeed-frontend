@@ -11,3 +11,17 @@ export const getArticles = (url) => dispatch => {
             dispatch({type: `${ActionTypes.GET_ARTICLES}_REJECTED`, payload: error})
         })
 };
+
+export const setPageNum = (page_num) => {
+    return {
+        type: ActionTypes.SET_PAGE_NUM,
+        payload: page_num
+    }
+}
+
+export const setPageSize = (page_size) => {
+    return {
+        type: ActionTypes.SET_PAGE_SIZE,
+        payload: page_size
+    }
+}

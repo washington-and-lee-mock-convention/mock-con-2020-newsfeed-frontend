@@ -30,8 +30,6 @@ const generateRows = (props) => {
 export default props => {
 
     const rows = generateRows(props)
-
-    console.log(rows)
     
     return (
         <Table
