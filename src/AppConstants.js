@@ -9,10 +9,11 @@ export const DEFAULT_ARTICLE_REDUCER_STATE = {
     loading: false,
     loaded: false,
     error: null,
+    count: 0,
 }
 
 export const DEFAULT_NAVIGATION_REDUCER_STATE = {
-    page_num: 1,
+    page_num: 0,
     page_size: 10
 }
 
@@ -22,7 +23,8 @@ export function MAP_STATE_TO_PROPS(state) {
             articles: state.articles.articles,
             error: state.articles.error,
             loading: state.articles.loading,
-            loaded: state.articles.loaded
+            loaded: state.articles.loaded,
+            count: state.articles.count
         },
         page: state.nav.page_num,
         page_size: state.nav.page_size

@@ -4,7 +4,8 @@ const initialState = {
     loading: ConstantTypes.DEFAULT_ARTICLE_REDUCER_STATE.loading,
     loaded: ConstantTypes.DEFAULT_ARTICLE_REDUCER_STATE.loaded,
     articles: ConstantTypes.DEFAULT_ARTICLE_REDUCER_STATE.articles,
-    error: ConstantTypes.DEFAULT_ARTICLE_REDUCER_STATE.error
+    error: ConstantTypes.DEFAULT_ARTICLE_REDUCER_STATE.error,
+    count: ConstantTypes.DEFAULT_ARTICLE_REDUCER_STATE.count,
 }
 
 const ArticlesReducer = (state=initialState, action) => {
@@ -25,7 +26,8 @@ const ArticlesReducer = (state=initialState, action) => {
                 ...state,
                 loading: false,
                 loaded: true,
-                articles: action.payload
+                articles: action.payload.data,
+                count: action.payload.count
             }
         default:
             return state;

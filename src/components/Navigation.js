@@ -11,10 +11,11 @@ export default props => {
         <Nav onSelect={ (item) => setActive(item.itemId) }>
             <NavList>
                 <NavItem
+                    title='News Feed'
                     preventDefault
                     itemId={1}
                     isActive={activeItem === 1}
-                />
+                >News Feed</NavItem>
             </NavList>
         </Nav>
     );

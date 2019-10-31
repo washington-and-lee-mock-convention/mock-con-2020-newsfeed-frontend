@@ -18,6 +18,7 @@ class NewsFeed extends Component {
         super(props);
         this.state = {
             isNavOpen: false,
+            search: null,
         }
         this.onNavToggle = () => {
             this.setState ({
@@ -42,12 +43,22 @@ class NewsFeed extends Component {
         const {page, page_size} = this.props
         var query = `${DEFAULT_PATH}/articles?page=${page}&page_size=${page_size}`
         if (params) {
-            Object.entries(params).forEach(([key, search]) => {
-                query += `&${search.key}=`
-                console.log(search.key, search.values)
-                search.values.map(value => {
-                    query += `${value}%20`
+            Object.entries(params).forEach(([key, param]) => {
+                query += `&${param.key}=`;
+                if (param.key === 'search') {
+                    this.setState({
+                        search: param.values
+                    });
+                }
+                param.values.map(value => {
+                    query += `${value}%20`;
                 })
+            })
+        }
+        if (this.state.search){
+            query +=`&search=`;
+            this.state.search.map(value => {
+                query += `${value}%20`;
             })
         }
         this.props.dispatch(getArticles(query));

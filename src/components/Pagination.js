@@ -17,7 +17,7 @@ export default props => {
 
     return (
         <Pagination
-            itemCount={523}
+            itemCount={props.articleParams.count}
             perPage={props.page_size}
             page={props.page}
             onSetPage={(_event, pageNumber) => updatePageNum(pageNumber)}
