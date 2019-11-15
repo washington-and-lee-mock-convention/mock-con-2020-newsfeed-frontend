@@ -1,4 +1,4 @@
-export const DEFAULT_PATH='https://mock-con-2020-word-cloud.herokuapp.com/v1';
+export const DEFAULT_PATH='https://cors-anywhere.herokuapp.com/https://mock-con-2020-word-cloud.herokuapp.com/v1';
 export const SET_ACTIVE_PAGE='SET_ACTIVE_PAGE';
 export const SET_PAGE_NUM='SET_PAGE_NUM';
 export const SET_PAGE_SIZE='SET_PAGE_SIZE';
